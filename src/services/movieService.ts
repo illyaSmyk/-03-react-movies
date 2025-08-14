@@ -1,4 +1,4 @@
-import axios, { type AxiosResponse } from "axios";
+import axios from "axios";
 import { type Movie } from "../types/movie";
 
 
@@ -15,7 +15,7 @@ interface MoviesResponse {
 
 export const fetchMovies = async (query: string): Promise<MoviesResponse> => {
     console.log("Search query:", query);
-     console.log("API Key:", API_KEY);// Проверяем, что приходит в query
+    console.log("API Key:", API_KEY);// Проверяем, что приходит в query
 
   const response = await axios.get<MoviesResponse>(
     `${API_BASE_URL}/search/movie`,
